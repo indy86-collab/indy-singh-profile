@@ -6,3 +6,5 @@ Sitemap: https://indy-singh.com/sitemap.xml
 
 # Crawl-delay
 Crawl-delay: 1
+
+
