@@ -188,7 +188,7 @@ export default function Home() {
               </p>
               
               <p className="text-lg md:text-xl text-slate-600 leading-relaxed mb-12">
-                My projects include SlangWatch.ai, MCPCloud.store, ResumeBoost.in, and Open House Twickenham — all created to solve real-world problems with practical, innovative tech.
+                My projects include SlangWatch.com, MCPCloud.store, Open House Twickenham, and Khalsa Diwan Afghanistan — each built to address real-world challenges with practical, innovative technology.
               </p>
           
           {/* Social Media Buttons */}
@@ -247,7 +247,7 @@ export default function Home() {
           {/* Achievements List */}
           <div className="space-y-8">
             {[
-              "Delivered multiple SaaS and AI-driven products, including SlangWatch.ai, MCPCloud.store, ResumeBoost.in, and SolveToSee.com.",
+              "Delivered multiple SaaS and AI-driven products, including SlangWatch.com and MCPCloud.store, along with innovative platforms such as Open House Twickenham and Khalsa Diwan Afghanistan.",
               "Led enterprise-scale integrations across Adobe Commerce, ServiceNow, Salesforce, and Jira, improving automation and reliability.",
               "Specialised in data workflows, ML integrations, and generative AI applications to solve real-world business challenges.",
               "Built automation frameworks with n8n, APIs, and CI/CD pipelines, reducing manual workload and improving efficiency.",
