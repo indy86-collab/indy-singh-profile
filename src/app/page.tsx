@@ -1133,19 +1133,19 @@ export default function Home() {
                 <ul className="space-y-2 text-slate-700">
                   <li className="flex items-start">
                     <span className="text-blue-600 mr-2 mt-1">•</span>
-                    <span>"Fix bugs / speed up site" <span className="text-slate-500 text-sm">(1–2 hours)</span></span>
+                    <span>&quot;Fix bugs / speed up site&quot; <span className="text-slate-500 text-sm">(1–2 hours)</span></span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-blue-600 mr-2 mt-1">•</span>
-                    <span>"Set up Stripe / webhooks"</span>
+                    <span>&quot;Set up Stripe / webhooks&quot;</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-blue-600 mr-2 mt-1">•</span>
-                    <span>"Deploy your app to production"</span>
+                    <span>&quot;Deploy your app to production&quot;</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-blue-600 mr-2 mt-1">•</span>
-                    <span>"Write scripts / automation"</span>
+                    <span>&quot;Write scripts / automation&quot;</span>
                   </li>
                 </ul>
               </div>
