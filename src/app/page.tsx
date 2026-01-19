@@ -189,7 +189,7 @@ export default function Home() {
               </p>
               
               <p className="text-lg md:text-xl text-slate-600 leading-relaxed mb-12">
-                My projects include SlangWatch.com, MCPCloud.store, Open House Twickenham, and Khalsa Diwan Afghanistan — each built to address real-world challenges with practical, innovative technology.
+                My projects include SlangWatch.com, MCPCloud.store, BingoGen.ai, PhotoComply, RageRoom Directory, ResumeBoost, and Khalsa Diwan Afghanistan — each built to address real-world challenges with practical, innovative technology.
               </p>
           
           {/* Social Media Buttons */}
@@ -248,7 +248,7 @@ export default function Home() {
           {/* Achievements List */}
           <div className="space-y-8">
             {[
-              "Delivered multiple SaaS and AI-driven products, including SlangWatch.com and MCPCloud.store, along with innovative platforms such as Open House Twickenham and Khalsa Diwan Afghanistan.",
+              "Delivered multiple SaaS and AI-driven products, including SlangWatch.com, MCPCloud.store, BingoGen.ai, PhotoComply, RageRoom Directory, and ResumeBoost, along with innovative platforms such as Khalsa Diwan Afghanistan.",
               "Led enterprise-scale integrations across Adobe Commerce, ServiceNow, Salesforce, and Jira, improving automation and reliability.",
               "Specialised in data workflows, ML integrations, and generative AI applications to solve real-world business challenges.",
               "Built automation frameworks with n8n, APIs, and CI/CD pipelines, reducing manual workload and improving efficiency.",
@@ -518,7 +518,7 @@ export default function Home() {
               </div>
             </motion.div>
 
-            {/* Open House Twickenham */}
+            {/* BingoGen.ai */}
             <motion.div 
               className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
               initial={{ opacity: 0, y: 50 }}
@@ -528,14 +528,14 @@ export default function Home() {
               whileHover={{ scale: 1.05 }}
             >
               {/* Project Image */}
-              <div className="w-full h-56 bg-gradient-to-br from-emerald-500 to-teal-600 relative overflow-hidden">
+              <div className="w-full h-56 bg-gradient-to-br from-pink-500 to-rose-600 relative overflow-hidden">
                 <div className="absolute inset-0 bg-black/20"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center text-white">
                     <svg className="w-16 h-16 mx-auto mb-4 opacity-80" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                     </svg>
-                    <h3 className="text-xl font-bold">Open House Twickenham</h3>
+                    <h3 className="text-xl font-bold">BingoGen.ai</h3>
                   </div>
                 </div>
               </div>
@@ -544,30 +544,188 @@ export default function Home() {
               <div className="p-6">
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="bg-emerald-100 text-emerald-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Real Estate</span>
-                  <span className="bg-teal-100 text-teal-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Business</span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Web Design</span>
+                  <span className="bg-pink-100 text-pink-800 text-xs font-medium px-2.5 py-0.5 rounded-full">AI</span>
+                  <span className="bg-rose-100 text-rose-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Gaming</span>
+                  <span className="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full">SaaS</span>
                 </div>
                 
                 {/* Title */}
-                <h3 className="text-xl font-bold text-slate-900 mb-3">Open House Twickenham</h3>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">BingoGen.ai</h3>
                 
                 {/* Description */}
                 <p className="text-slate-600 mb-6 leading-relaxed">
-                  A local estate agency branch offering property sales, lettings, and auctions with a tech-driven, customer-first approach.
+                  An AI-powered bingo generation platform that creates custom bingo cards and experiences using advanced AI technology.
                 </p>
                 
                 {/* Buttons */}
                 <div className="flex flex-col sm:flex-row gap-3">
                   <a
-                    href="https://openhousetwickenham.co.uk/"
+                    href="https://www.bingogen.ai/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-2.5 px-4 rounded-lg transition-all duration-300 text-center hover:shadow-lg"
                   >
                     Live Demo
                   </a>
-                  <div className="flex-1"></div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* PhotoComply.com */}
+            <motion.div 
+              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.05 }}
+            >
+              {/* Project Image */}
+              <div className="w-full h-56 bg-gradient-to-br from-cyan-500 to-blue-600 relative overflow-hidden">
+                <div className="absolute inset-0 bg-black/20"></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center text-white">
+                    <svg className="w-16 h-16 mx-auto mb-4 opacity-80" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+                    </svg>
+                    <h3 className="text-xl font-bold">PhotoComply</h3>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Project Content */}
+              <div className="p-6">
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="bg-cyan-100 text-cyan-800 text-xs font-medium px-2.5 py-0.5 rounded-full">AI</span>
+                  <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Privacy</span>
+                  <span className="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full">GDPR</span>
+                </div>
+                
+                {/* Title */}
+                <h3 className="text-xl font-bold text-slate-900 mb-3">PhotoComply</h3>
+                
+                {/* Description */}
+                <p className="text-slate-600 mb-6 leading-relaxed">
+                  Free AI-powered GDPR-compliant photo redaction tool that automatically blurs faces and black-boxes screens & documents. All processing happens in-memory with no data storage.
+                </p>
+                
+                {/* Buttons */}
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <a
+                    href="https://www.photocomply.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-2.5 px-4 rounded-lg transition-all duration-300 text-center hover:shadow-lg"
+                  >
+                    Live Demo
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* RageRoomDirectory.co.uk */}
+            <motion.div 
+              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.05 }}
+            >
+              {/* Project Image */}
+              <div className="w-full h-56 bg-gradient-to-br from-red-500 to-orange-600 relative overflow-hidden">
+                <div className="absolute inset-0 bg-black/20"></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center text-white">
+                    <svg className="w-16 h-16 mx-auto mb-4 opacity-80" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
+                    </svg>
+                    <h3 className="text-xl font-bold">RageRoom Directory</h3>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Project Content */}
+              <div className="p-6">
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Directory</span>
+                  <span className="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded-full">UK Market</span>
+                  <span className="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full">SaaS</span>
+                </div>
+                
+                {/* Title */}
+                <h3 className="text-xl font-bold text-slate-900 mb-3">RageRoom Directory</h3>
+                
+                {/* Description */}
+                <p className="text-slate-600 mb-6 leading-relaxed">
+                  UK&apos;s leading directory for rage rooms and smash experiences. Discover and compare 30+ venues across major cities with pricing, packages, and booking options for stress relief activities.
+                </p>
+                
+                {/* Buttons */}
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <a
+                    href="https://rageroomdirectory.co.uk/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-2.5 px-4 rounded-lg transition-all duration-300 text-center hover:shadow-lg"
+                  >
+                    Live Demo
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* ResumeBoost.in */}
+            <motion.div 
+              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.05 }}
+            >
+              {/* Project Image */}
+              <div className="w-full h-56 bg-gradient-to-br from-indigo-500 to-purple-600 relative overflow-hidden">
+                <div className="absolute inset-0 bg-black/20"></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center text-white">
+                    <svg className="w-16 h-16 mx-auto mb-4 opacity-80" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                    </svg>
+                    <h3 className="text-xl font-bold">ResumeBoost</h3>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Project Content */}
+              <div className="p-6">
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded-full">AI</span>
+                  <span className="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Career</span>
+                  <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">ATS</span>
+                </div>
+                
+                {/* Title */}
+                <h3 className="text-xl font-bold text-slate-900 mb-3">ResumeBoost</h3>
+                
+                {/* Description */}
+                <p className="text-slate-600 mb-6 leading-relaxed">
+                  AI-powered resume builder optimized for US job markets. Features include ATS compatibility, instant health checks, AI resume tailoring, and job matching for LinkedIn, Indeed, and Fortune 500 recruiters.
+                </p>
+                
+                {/* Buttons */}
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <a
+                    href="https://www.resumeboost.in/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-2.5 px-4 rounded-lg transition-all duration-300 text-center hover:shadow-lg"
+                  >
+                    Live Demo
+                  </a>
                 </div>
               </div>
             </motion.div>
@@ -577,7 +735,7 @@ export default function Home() {
               className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              transition={{ duration: 0.6, delay: 0.7 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.05 }}
             >
@@ -1121,42 +1279,44 @@ export default function Home() {
             >
               <div className="flex items-center justify-between mb-6">
                 <h3 className="text-2xl font-bold text-slate-900">Option 1: Freelance Micro-Gigs</h3>
-                <span className="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">Fastest Cash</span>
+                <span className="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">Fast Turnaround</span>
               </div>
               
               <p className="text-slate-700 mb-6 leading-relaxed">
-                <strong>Goal:</strong> 1 client/day at £100, or 2 clients at £50
+                Quick, focused tasks delivered fast. Perfect for urgent fixes and small improvements.
               </p>
               
               <div className="mb-6">
-                <h4 className="text-lg font-semibold text-slate-900 mb-3">Examples I Can Sell:</h4>
-                <ul className="space-y-2 text-slate-700">
-                  <li className="flex items-start">
-                    <span className="text-blue-600 mr-2 mt-1">•</span>
-                    <span>&quot;Fix bugs / speed up site&quot; <span className="text-slate-500 text-sm">(1–2 hours)</span></span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-blue-600 mr-2 mt-1">•</span>
-                    <span>&quot;Set up Stripe / webhooks&quot;</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-blue-600 mr-2 mt-1">•</span>
-                    <span>&quot;Deploy your app to production&quot;</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-blue-600 mr-2 mt-1">•</span>
-                    <span>&quot;Write scripts / automation&quot;</span>
-                  </li>
-                </ul>
-              </div>
-              
-              <div className="mb-6">
-                <h4 className="text-lg font-semibold text-slate-900 mb-3">Where to Get Clients:</h4>
-                <div className="flex flex-wrap gap-2">
-                  <span className="bg-white text-slate-700 px-3 py-1 rounded-full text-sm font-medium shadow-sm">Upwork</span>
-                  <span className="bg-white text-slate-700 px-3 py-1 rounded-full text-sm font-medium shadow-sm">Fiverr</span>
-                  <span className="bg-white text-slate-700 px-3 py-1 rounded-full text-sm font-medium shadow-sm">PeoplePerHour</span>
-                  <span className="bg-white text-slate-700 px-3 py-1 rounded-full text-sm font-medium shadow-sm">LinkedIn DMs</span>
+                <h4 className="text-lg font-semibold text-slate-900 mb-3">Services I Offer:</h4>
+                <div className="space-y-3">
+                  <div className="bg-white rounded-lg p-4 shadow-sm border border-blue-100">
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="font-medium text-slate-900">Fix bugs / speed up site</span>
+                      <span className="bg-blue-100 text-blue-800 text-sm font-bold px-3 py-1 rounded-full">£50 - £100</span>
+                    </div>
+                    <p className="text-sm text-slate-600">(1–2 hours)</p>
+                  </div>
+                  
+                  <div className="bg-white rounded-lg p-4 shadow-sm border border-blue-100">
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="font-medium text-slate-900">Set up Stripe / webhooks</span>
+                      <span className="bg-blue-100 text-blue-800 text-sm font-bold px-3 py-1 rounded-full">£50 - £100</span>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-white rounded-lg p-4 shadow-sm border border-blue-100">
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="font-medium text-slate-900">Deploy your app to production</span>
+                      <span className="bg-blue-100 text-blue-800 text-sm font-bold px-3 py-1 rounded-full">£50 - £100</span>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-white rounded-lg p-4 shadow-sm border border-blue-100">
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="font-medium text-slate-900">Write scripts / automation</span>
+                      <span className="bg-blue-100 text-blue-800 text-sm font-bold px-3 py-1 rounded-full">£50 - £100</span>
+                    </div>
+                  </div>
                 </div>
               </div>
               
@@ -1180,16 +1340,16 @@ export default function Home() {
               whileHover={{ scale: 1.02 }}
             >
               <div className="flex items-center justify-between mb-6">
-                <h3 className="text-2xl font-bold text-slate-900">Option 2: Productised Service</h3>
-                <span className="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full">Best Consistency</span>
+                <h3 className="text-2xl font-bold text-slate-900">Option 2: Productised Services</h3>
+                <span className="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full">Best Value</span>
               </div>
               
               <p className="text-slate-700 mb-6 leading-relaxed">
-                Sell a fixed outcome with clear pricing and deliverables
+                Fixed-price packages with clear deliverables and guaranteed outcomes. Perfect for specific needs with defined scopes.
               </p>
               
               <div className="mb-6">
-                <h4 className="text-lg font-semibold text-slate-900 mb-4">Fixed-Price Packages:</h4>
+                <h4 className="text-lg font-semibold text-slate-900 mb-4">Services I Offer:</h4>
                 <div className="space-y-4">
                   <div className="bg-white rounded-lg p-4 shadow-sm border border-purple-100">
                     <div className="flex items-center justify-between mb-2">
