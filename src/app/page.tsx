@@ -48,6 +48,7 @@ export default function Home() {
                 { href: "#skills", label: "Skills" },
                 { href: "#projects", label: "Projects" },
                 { href: "#experience", label: "Experience" },
+                { href: "#services", label: "Services" },
                 { href: "#connect", label: "Contact" }
               ].map((item, index) => (
                 <motion.a
@@ -910,36 +911,12 @@ export default function Home() {
           
           {/* Certifications Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Adobe Certified Professional – Adobe Commerce Developer */}
-            <motion.div 
-              className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
-            >
-              <div className="flex items-start space-x-4">
-                {/* Certification Icon */}
-                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                  </svg>
-                </div>
-                
-                <div className="flex-1">
-                  <h3 className="text-lg font-bold text-slate-900 mb-2">Adobe Certified Professional – Commerce Developer</h3>
-                  <p className="text-slate-500 text-sm mb-3">Adobe, 2024–2026</p>
-                  <p className="text-slate-600 text-sm leading-relaxed">Validates skills in developing and deploying Magento 2 solutions for enterprise e-commerce platforms.</p>
-                </div>
-              </div>
-            </motion.div>
-
             {/* Generative AI: Prompt Engineering Basics */}
             <motion.div 
               className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
             >
               <div className="flex items-start space-x-4">
@@ -958,36 +935,12 @@ export default function Home() {
               </div>
             </motion.div>
 
-            {/* Full Stack Observability Practitioner Exam */}
-            <motion.div 
-              className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-            >
-              <div className="flex items-start space-x-4">
-                {/* Certification Icon */}
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/>
-                  </svg>
-                </div>
-                
-                <div className="flex-1">
-                  <h3 className="text-lg font-bold text-slate-900 mb-2">Full Stack Observability Practitioner Exam</h3>
-                  <p className="text-slate-500 text-sm mb-3">New Relic, 2024–2026</p>
-                  <p className="text-slate-600 text-sm leading-relaxed">Demonstrates expertise in monitoring, troubleshooting, and optimizing full-stack applications.</p>
-                </div>
-              </div>
-            </motion.div>
-
             {/* Generative AI for Everyone */}
             <motion.div 
               className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
               <div className="flex items-start space-x-4">
@@ -1006,36 +959,12 @@ export default function Home() {
               </div>
             </motion.div>
 
-            {/* Adobe Commerce Business Practitioner Professional */}
-            <motion.div 
-              className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              viewport={{ once: true }}
-            >
-              <div className="flex items-start space-x-4">
-                {/* Certification Icon */}
-                <div className="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-pink-600" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.9 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/>
-                  </svg>
-                </div>
-                
-                <div className="flex-1">
-                  <h3 className="text-lg font-bold text-slate-900 mb-2">Adobe Commerce Business Practitioner Professional</h3>
-                  <p className="text-slate-500 text-sm mb-3">Adobe, 2023</p>
-                  <p className="text-slate-600 text-sm leading-relaxed">Validates expertise in managing Adobe Commerce business operations and customer experiences.</p>
-                </div>
-              </div>
-            </motion.div>
-
             {/* What is Generative AI? */}
             <motion.div 
               className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
             >
               <div className="flex items-start space-x-4">
@@ -1053,12 +982,300 @@ export default function Home() {
                 </div>
               </div>
             </motion.div>
+
+            {/* Understanding Agentic AI */}
+            <motion.div 
+              className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
+              <div className="flex items-start space-x-4">
+                {/* Certification Icon */}
+                <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-indigo-600" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                </div>
+                
+                <div className="flex-1">
+                  <h3 className="text-lg font-bold text-slate-900 mb-2">Understanding Agentic AI</h3>
+                  <p className="text-slate-500 text-sm mb-3">Digital Workforce Services Plc, Sep 2025</p>
+                  <p className="text-slate-600 text-sm leading-relaxed">Comprehensive course covering autonomous AI agents, their capabilities, and practical applications in modern workflows.</p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Adobe Certified Professional – Adobe Commerce Developer */}
+            <motion.div 
+              className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <div className="flex items-start space-x-4">
+                {/* Certification Icon */}
+                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                </div>
+                
+                <div className="flex-1">
+                  <h3 className="text-lg font-bold text-slate-900 mb-2">Adobe Certified Professional – Commerce Developer</h3>
+                  <p className="text-slate-500 text-sm mb-3">Adobe, 2024–2026</p>
+                  <p className="text-slate-600 text-sm leading-relaxed">Validates skills in developing and deploying Magento 2 solutions for enterprise e-commerce platforms.</p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Full Stack Observability Practitioner Exam */}
+            <motion.div 
+              className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <div className="flex items-start space-x-4">
+                {/* Certification Icon */}
+                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/>
+                  </svg>
+                </div>
+                
+                <div className="flex-1">
+                  <h3 className="text-lg font-bold text-slate-900 mb-2">Full Stack Observability Practitioner Exam</h3>
+                  <p className="text-slate-500 text-sm mb-3">New Relic, 2024–2026</p>
+                  <p className="text-slate-600 text-sm leading-relaxed">Demonstrates expertise in monitoring, troubleshooting, and optimizing full-stack applications.</p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Adobe Commerce Business Practitioner Professional */}
+            <motion.div 
+              className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.7 }}
+              viewport={{ once: true }}
+            >
+              <div className="flex items-start space-x-4">
+                {/* Certification Icon */}
+                <div className="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-pink-600" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.9 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/>
+                  </svg>
+                </div>
+                
+                <div className="flex-1">
+                  <h3 className="text-lg font-bold text-slate-900 mb-2">Adobe Commerce Business Practitioner Professional</h3>
+                  <p className="text-slate-500 text-sm mb-3">Adobe, 2023</p>
+                  <p className="text-slate-600 text-sm leading-relaxed">Validates expertise in managing Adobe Commerce business operations and customer experiences.</p>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
+      {/* Services Section */}
+      <section id="services" className="bg-white py-24 px-6 lg:px-8" role="region" aria-labelledby="services-heading">
+        <div className="max-w-7xl mx-auto">
+          {/* Section Title */}
+          <motion.h2 
+            id="services-heading"
+            className="text-4xl md:text-5xl font-bold text-slate-900 mb-4 text-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            Services <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">I Offer</span>
+          </motion.h2>
+          
+          {/* Subtitle */}
+          <motion.p 
+            className="text-lg md:text-xl text-slate-600 mb-16 text-center max-w-3xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            Choose the service option that works best for your needs
+          </motion.p>
+          
+          {/* Services Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            {/* Option 1: Freelance Micro-Gigs */}
+            <motion.div 
+              className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 border-2 border-blue-100"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.02 }}
+            >
+              <div className="flex items-center justify-between mb-6">
+                <h3 className="text-2xl font-bold text-slate-900">Option 1: Freelance Micro-Gigs</h3>
+                <span className="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">Fastest Cash</span>
+              </div>
+              
+              <p className="text-slate-700 mb-6 leading-relaxed">
+                <strong>Goal:</strong> 1 client/day at £100, or 2 clients at £50
+              </p>
+              
+              <div className="mb-6">
+                <h4 className="text-lg font-semibold text-slate-900 mb-3">Examples I Can Sell:</h4>
+                <ul className="space-y-2 text-slate-700">
+                  <li className="flex items-start">
+                    <span className="text-blue-600 mr-2 mt-1">•</span>
+                    <span>"Fix bugs / speed up site" <span className="text-slate-500 text-sm">(1–2 hours)</span></span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-blue-600 mr-2 mt-1">•</span>
+                    <span>"Set up Stripe / webhooks"</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-blue-600 mr-2 mt-1">•</span>
+                    <span>"Deploy your app to production"</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-blue-600 mr-2 mt-1">•</span>
+                    <span>"Write scripts / automation"</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div className="mb-6">
+                <h4 className="text-lg font-semibold text-slate-900 mb-3">Where to Get Clients:</h4>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-white text-slate-700 px-3 py-1 rounded-full text-sm font-medium shadow-sm">Upwork</span>
+                  <span className="bg-white text-slate-700 px-3 py-1 rounded-full text-sm font-medium shadow-sm">Fiverr</span>
+                  <span className="bg-white text-slate-700 px-3 py-1 rounded-full text-sm font-medium shadow-sm">PeoplePerHour</span>
+                  <span className="bg-white text-slate-700 px-3 py-1 rounded-full text-sm font-medium shadow-sm">LinkedIn DMs</span>
+                </div>
+              </div>
+              
+              <motion.a
+                href="mailto:indyz_86@hotmail.com?subject=Freelance Micro-Gig Inquiry"
+                className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 text-center hover:shadow-lg"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                Get in Touch for Micro-Gigs
+              </motion.a>
+            </motion.div>
+
+            {/* Option 2: Productised Service */}
+            <motion.div 
+              className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 border-2 border-purple-100"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.02 }}
+            >
+              <div className="flex items-center justify-between mb-6">
+                <h3 className="text-2xl font-bold text-slate-900">Option 2: Productised Service</h3>
+                <span className="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full">Best Consistency</span>
+              </div>
+              
+              <p className="text-slate-700 mb-6 leading-relaxed">
+                Sell a fixed outcome with clear pricing and deliverables
+              </p>
+              
+              <div className="mb-6">
+                <h4 className="text-lg font-semibold text-slate-900 mb-4">Fixed-Price Packages:</h4>
+                <div className="space-y-4">
+                  <div className="bg-white rounded-lg p-4 shadow-sm border border-purple-100">
+                    <div className="flex items-center justify-between mb-2">
+                      <h5 className="font-semibold text-slate-900">Website Speed + SEO Quick Fix</h5>
+                      <span className="bg-green-100 text-green-800 text-sm font-bold px-3 py-1 rounded-full">£299</span>
+                    </div>
+                    <p className="text-sm text-slate-600">Optimize your website&apos;s performance and improve SEO rankings</p>
+                  </div>
+                  
+                  <div className="bg-white rounded-lg p-4 shadow-sm border border-purple-100">
+                    <div className="flex items-center justify-between mb-2">
+                      <h5 className="font-semibold text-slate-900">Landing Page + Copy Refresh</h5>
+                      <span className="bg-green-100 text-green-800 text-sm font-bold px-3 py-1 rounded-full">£199</span>
+                    </div>
+                    <p className="text-sm text-slate-600">Modernize your landing page with fresh design and compelling copy</p>
+                  </div>
+                  
+                  <div className="bg-white rounded-lg p-4 shadow-sm border border-purple-100">
+                    <div className="flex items-center justify-between mb-2">
+                      <h5 className="font-semibold text-slate-900">AI Chatbot Added to Your Site</h5>
+                      <span className="bg-green-100 text-green-800 text-sm font-bold px-3 py-1 rounded-full">£499</span>
+                    </div>
+                    <p className="text-sm text-slate-600">Integrate an intelligent AI chatbot to enhance customer engagement</p>
+                  </div>
+                </div>
+              </div>
+              
+              <motion.a
+                href="mailto:indyz_86@hotmail.com?subject=Productised Service Inquiry"
+                className="block w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 text-center hover:shadow-lg"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                Get in Touch for Productised Services
+              </motion.a>
+            </motion.div>
+          </div>
+          
+          {/* Contact CTA */}
+          <motion.div 
+            className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-center text-white"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="text-2xl font-bold mb-4">Ready to Get Started?</h3>
+            <p className="text-lg mb-6 text-blue-100">
+              Whether you need a quick fix or a complete solution, I&apos;m here to help. Let&apos;s discuss your project!
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.a
+                href="mailto:indyz_86@hotmail.com?subject=Service Inquiry"
+                className="bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-xl"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                Email Me
+              </motion.a>
+              <motion.a
+                href="https://www.linkedin.com/in/indy-singh-88986617/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-xl border-2 border-white/20"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                Connect on LinkedIn
+              </motion.a>
+              <motion.a
+                href="https://wa.me/447878514912?text=Hi%20Indy,%20I%27d%20like%20to%20discuss%20your%20services!"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-green-600 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-xl border-2 border-white/20"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                WhatsApp Me
+              </motion.a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Let's Connect Section */}
-      <section id="connect" className="bg-white py-16 px-4" role="region" aria-labelledby="connect-heading">
+      <section id="connect" className="bg-slate-50 py-16 px-4" role="region" aria-labelledby="connect-heading">
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2 
             id="connect-heading"
