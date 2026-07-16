@@ -523,65 +523,44 @@ export default function Home() {
 
       {/* About */}
       <section id="about" className="relative py-24 md:py-32 px-5 sm:px-8" aria-labelledby="about-heading">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            <motion.div
-              className="lg:col-span-5"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-80px" }}
-              variants={fadeUp}
-            >
-              <div className="relative max-w-md mx-auto lg:mx-0">
-                <div className="absolute -inset-3 border border-accent/30 translate-x-3 translate-y-3" />
-                <img
-                  src="/indy.jpeg"
-                  alt="Indy Singh - Senior Engineer and AI/ML Enthusiast"
-                  className="relative w-full aspect-[4/5] object-cover"
-                />
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="lg:col-span-7"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-80px" }}
-              variants={fadeUp}
-              custom={1}
-            >
-              <p className="font-display text-accent text-sm tracking-[0.18em] uppercase mb-3">About</p>
-              <h2 id="about-heading" className="font-display text-4xl md:text-5xl font-semibold text-ink mb-8 tracking-tight">
-                Engineer. Builder. Problem solver.
-              </h2>
-              <p className="text-lg text-muted leading-relaxed mb-6">
-                I&apos;m Indy Singh, a senior engineer and AI/ML enthusiast with over a decade of experience in
-                building, supporting, and scaling technology solutions. I specialise in automation, cloud
-                infrastructure, and AI-driven products — turning ideas into working SaaS applications.
-              </p>
-              <p className="text-lg text-muted leading-relaxed mb-10">
-                My projects include EventAlpha, CryptoBankStatement, SlangWatch.com, BingoGen.ai, PhotoComply, and
-                RageRoom Directory — each built for real-world challenges.
-              </p>
-              <div className="flex flex-wrap gap-3">
-                {[
-                  { href: "https://www.linkedin.com/in/indy-singh-88986617/", label: "LinkedIn" },
-                  { href: "https://github.com/indy86-collab/", label: "GitHub" },
-                  { href: "mailto:indyz_86@hotmail.com", label: "Email" },
-                ].map((link) => (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    target={link.href.startsWith("http") ? "_blank" : undefined}
-                    rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                    className="inline-flex items-center px-5 py-2.5 border border-ink/15 text-ink text-sm font-medium hover:border-accent hover:text-accent transition-colors duration-300"
-                  >
-                    {link.label}
-                  </a>
-                ))}
-              </div>
-            </motion.div>
-          </div>
+        <div className="max-w-3xl mx-auto">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-80px" }}
+            variants={fadeUp}
+          >
+            <p className="font-display text-accent text-sm tracking-[0.18em] uppercase mb-3">About</p>
+            <h2 id="about-heading" className="font-display text-4xl md:text-5xl font-semibold text-ink mb-8 tracking-tight">
+              Engineer. Builder. Problem solver.
+            </h2>
+            <p className="text-lg text-muted leading-relaxed mb-6">
+              I&apos;m Indy Singh, a senior engineer and AI/ML enthusiast with over a decade of experience in
+              building, supporting, and scaling technology solutions. I specialise in automation, cloud
+              infrastructure, and AI-driven products — turning ideas into working SaaS applications.
+            </p>
+            <p className="text-lg text-muted leading-relaxed mb-10">
+              My projects include EventAlpha, CryptoBankStatement, SlangWatch.com, BingoGen.ai, PhotoComply, and
+              RageRoom Directory — each built for real-world challenges.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              {[
+                { href: "https://www.linkedin.com/in/indy-singh-88986617/", label: "LinkedIn" },
+                { href: "https://github.com/indy86-collab/", label: "GitHub" },
+                { href: "mailto:indyz_86@hotmail.com", label: "Email" },
+              ].map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target={link.href.startsWith("http") ? "_blank" : undefined}
+                  rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                  className="inline-flex items-center px-5 py-2.5 border border-ink/15 text-ink text-sm font-medium hover:border-accent hover:text-accent transition-colors duration-300"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </section>
 
