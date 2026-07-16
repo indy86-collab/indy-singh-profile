@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { DM_Sans, Space_Grotesk } from "next/font/google";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
   subsets: ["latin"],
   display: "swap",
   preload: true,
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
   subsets: ["latin"],
   display: "swap",
   preload: true,
@@ -81,52 +81,44 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Preload critical resources */}
         <link rel="preload" href="/indy.jpeg" as="image" />
-        
-        {/* Favicons */}
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        
-        {/* Manifest */}
         <link rel="manifest" href="/manifest.json" />
-        
-        {/* Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Person",
-              "name": "Indy Singh",
-              "url": "https://indy-singh.com",
-              "sameAs": [
+              name: "Indy Singh",
+              url: "https://indy-singh.com",
+              sameAs: [
                 "https://www.linkedin.com/in/indy-singh-88986617/",
-                "https://github.com/indy86-collab"
+                "https://github.com/indy86-collab",
               ],
-              "jobTitle": "Senior Engineer | AI & ML Enthusiast",
-              "image": "/indy.jpeg",
-              "description": "Senior engineer and AI/ML enthusiast with over a decade of experience in building, supporting, and scaling technology solutions.",
-              "knowsAbout": [
+              jobTitle: "Senior Engineer | AI & ML Enthusiast",
+              image: "/indy.jpeg",
+              description:
+                "Senior engineer and AI/ML enthusiast with over a decade of experience in building, supporting, and scaling technology solutions.",
+              knowsAbout: [
                 "Artificial Intelligence",
                 "Machine Learning",
                 "Software Engineering",
                 "Data Engineering",
                 "Adobe Commerce",
                 "ServiceNow",
-                "Cloud Infrastructure"
+                "Cloud Infrastructure",
               ],
-              "worksFor": {
+              worksFor: {
                 "@type": "Organization",
-                "name": "Adobe"
-              }
-            })
+                name: "Adobe",
+              },
+            }),
           }}
         />
-        
-        {/* Google Analytics Placeholder */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
           strategy="afterInteractive"
@@ -140,12 +132,8 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${dmSans.variable} ${spaceGrotesk.variable} antialiased`}>
         {children}
-        
-        {/* Vercel Analytics - enables website analytics and performance monitoring */}
         <Analytics />
       </body>
     </html>
