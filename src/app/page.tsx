@@ -737,16 +737,6 @@ export default function Home() {
                   >
                     Live demo
                   </a>
-                  {project.github && (
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="link-underline text-muted"
-                    >
-                      GitHub
-                    </a>
-                  )}
                 </div>
               </motion.article>
             ))}
