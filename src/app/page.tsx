@@ -3,15 +3,13 @@
 import { useEffect, useState } from "react";
 import { motion, useScroll, useSpring, AnimatePresence } from "framer-motion";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
+import Image from "next/image";
 
 const navItems = [
-  { href: "#hero", label: "Home" },
   { href: "#about", label: "About" },
-  { href: "#skills", label: "Skills" },
-  { href: "#projects", label: "Projects" },
+  { href: "#projects", label: "Work" },
   { href: "#experience", label: "Experience" },
   { href: "#services", label: "Services" },
-  { href: "#connect", label: "Contact" },
 ];
 
 const achievements = [
@@ -327,6 +325,12 @@ export default function Home() {
 
   return (
     <div className="min-h-screen mesh-bg text-ink">
+      <a
+        href="#main-content"
+        className="fixed left-4 top-4 z-[70] -translate-y-24 rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white focus:translate-y-0"
+      >
+        Skip to content
+      </a>
       <div className="noise-overlay" aria-hidden="true" />
       <ScrollProgress />
 
@@ -347,17 +351,11 @@ export default function Home() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <div
-                className={`relative w-9 h-9 lg:w-10 lg:h-10 overflow-hidden ring-1 transition-colors ${
-                  scrolled ? "ring-ink/10" : "ring-white/25"
-                }`}
-              >
-                <img src="/indy.jpeg" alt="Indy Singh" className="w-full h-full object-cover" />
-              </div>
+              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-accent font-display text-sm font-bold text-white shadow-sm">
+                IS
+              </span>
               <span
-                className={`font-display text-lg lg:text-xl font-semibold tracking-tight transition-colors ${
-                  scrolled ? "text-ink" : "text-white"
-                }`}
+                className="font-display text-lg lg:text-xl font-semibold tracking-tight text-ink"
               >
                 Indy Singh
               </span>
@@ -368,9 +366,7 @@ export default function Home() {
                 <motion.a
                   key={item.href}
                   href={item.href}
-                  className={`link-underline text-sm font-medium transition-colors ${
-                    scrolled ? "text-muted hover:text-ink" : "text-white/70 hover:text-white"
-                  }`}
+                  className="link-underline text-sm font-medium text-muted transition-colors hover:text-ink"
                   initial={{ opacity: 0, y: -8 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.05 * index }}
@@ -378,11 +374,17 @@ export default function Home() {
                   {item.label}
                 </motion.a>
               ))}
+              <a
+                href="mailto:indyz_86@hotmail.com?subject=Project enquiry"
+                className="rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-accent"
+              >
+                Start a conversation
+              </a>
             </nav>
 
             <motion.button
               type="button"
-              className={`lg:hidden p-2 transition-colors ${scrolled ? "text-ink" : "text-white"}`}
+              className="lg:hidden p-2 text-ink transition-colors"
               aria-label={menuOpen ? "Close menu" : "Open menu"}
               aria-expanded={menuOpen}
               onClick={() => setMenuOpen((v) => !v)}
@@ -426,124 +428,163 @@ export default function Home() {
         </AnimatePresence>
       </header>
 
-      {/* Hero — full-bleed photo composition */}
-      <section id="hero" className="relative min-h-screen flex items-end overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src="/indy.jpeg"
-            alt=""
-            aria-hidden="true"
-            className="w-full h-full object-cover object-[center_20%] scale-105"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/75 to-ink/35" />
-          <div className="absolute inset-0 bg-gradient-to-r from-ink/70 via-ink/25 to-transparent" />
-          <div className="absolute inset-0 grid-fade opacity-30 mix-blend-overlay" />
-        </div>
+      <main id="main-content">
+        <section id="hero" className="relative overflow-hidden px-5 pb-16 pt-28 sm:px-8 md:pb-24 md:pt-36">
+          <div className="absolute inset-0 grid-fade opacity-45" aria-hidden="true" />
+          <div className="absolute -right-28 top-8 h-96 w-96 rounded-full bg-accent-bright/10 blur-3xl" aria-hidden="true" />
 
-        <div className="absolute top-1/4 right-[12%] w-48 h-48 rounded-full bg-accent-bright/20 blur-3xl float-slow pulse-soft hidden md:block" />
-        <div className="absolute bottom-1/3 left-[8%] w-36 h-36 rounded-full bg-accent-warm/15 blur-3xl float-slow hidden md:block" style={{ animationDelay: "2s" }} />
+          <div className="relative mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)] items-center gap-14 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,0.75fr)]">
+            <div className="min-w-0">
+              <motion.div
+                className="mb-7 inline-flex items-center gap-2 rounded-full border border-accent/20 bg-white/70 px-4 py-2 text-sm font-medium text-accent shadow-sm backdrop-blur"
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                <span className="h-2 w-2 rounded-full bg-accent-bright" />
+                London-based · Available for selected projects
+              </motion.div>
 
-        <div className="relative z-10 w-full max-w-6xl mx-auto px-5 sm:px-8 pb-20 pt-32 md:pb-28">
-          <motion.p
-            className="font-display text-accent-bright text-sm md:text-base tracking-[0.2em] uppercase mb-5"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-          >
-            Portfolio
-          </motion.p>
+              <motion.h1
+                className="font-display max-w-4xl text-[2.65rem] font-semibold leading-[1.02] tracking-[-0.05em] text-ink sm:text-6xl md:text-7xl lg:text-[5.35rem]"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
+              >
+                I turn complex ideas into{" "}
+                <span className="text-accent">useful digital products.</span>
+              </motion.h1>
 
-          <motion.h1
-            className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold tracking-tight text-white mb-6 max-w-4xl"
-            initial={{ opacity: 0, y: 36 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.85, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-          >
-            Indy Singh
-          </motion.h1>
+              <motion.p
+                className="mt-7 min-h-[2rem] max-w-full overflow-hidden text-lg font-medium text-ink-soft md:text-xl"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.2 }}
+              >
+                {text}
+                <Cursor cursorColor="#0f766e" />
+              </motion.p>
 
-          <motion.p
-            className="text-xl md:text-2xl text-white/85 mb-4 font-light min-h-[2rem]"
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.75, delay: 0.25 }}
-          >
-            {text}
-            <Cursor cursorColor="#14b8a6" />
-          </motion.p>
+              <motion.p
+                className="mt-3 max-w-2xl text-lg leading-relaxed text-muted"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.28 }}
+              >
+                Senior engineer and hands-on founder building AI products, SaaS platforms, and dependable
+                enterprise systems—from first sketch to production.
+              </motion.p>
 
-          <motion.p
-            className="text-base md:text-lg text-white/65 max-w-xl mb-10 leading-relaxed"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.75, delay: 0.35 }}
-          >
-            Building AI products, SaaS platforms, and reliable systems — from idea to production.
-          </motion.p>
+              <motion.div
+                className="mt-9 flex flex-col gap-3 sm:flex-row"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.38 }}
+              >
+                <a
+                  href="#projects"
+                  className="btn-primary inline-flex items-center justify-center gap-2 rounded-full bg-ink px-7 py-3.5 font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-accent"
+                >
+                  Explore my work
+                  <span aria-hidden="true">↘</span>
+                </a>
+                <a
+                  href="/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-full border border-ink/15 bg-white/70 px-7 py-3.5 font-semibold text-ink transition-all hover:-translate-y-0.5 hover:border-ink/30 hover:bg-white"
+                >
+                  View résumé
+                </a>
+              </motion.div>
+            </div>
+
+            <motion.div
+              className="relative mx-auto w-full max-w-sm lg:mr-0"
+              initial={{ opacity: 0, scale: 0.96, y: 24 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-ink shadow-[0_32px_80px_rgba(11,18,32,0.2)]">
+                <Image
+                  src="/indy.jpeg"
+                  alt="Indy Singh"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 384px, 32vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-5 -left-5 rounded-2xl border border-white/70 bg-white/90 px-5 py-4 shadow-xl backdrop-blur">
+                <p className="font-display text-2xl font-semibold text-ink">15+ years</p>
+                <p className="text-sm text-muted">solving real problems</p>
+              </div>
+            </motion.div>
+          </div>
 
           <motion.div
-            className="flex flex-col sm:flex-row gap-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.45 }}
+            className="relative mx-auto mt-20 grid max-w-6xl grid-cols-2 gap-px overflow-hidden rounded-2xl border border-line bg-line md:grid-cols-4"
+            initial="hidden"
+            animate="visible"
+            variants={fadeUp}
           >
-            <a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary inline-flex items-center justify-center bg-accent-bright text-ink font-semibold py-3.5 px-8 text-base transition-transform duration-300 hover:-translate-y-0.5"
-            >
-              View CV
-            </a>
-            <a
-              href="#projects"
-              className="inline-flex items-center justify-center border border-white/35 text-white font-medium py-3.5 px-8 text-base backdrop-blur-sm hover:bg-white/10 transition-all duration-300"
-            >
-              View Projects
-            </a>
+            {[
+              ["6", "Products launched"],
+              ["15+", "Years in technology"],
+              ["AI + SaaS", "Product focus"],
+              ["Adobe", "Enterprise experience"],
+            ].map(([value, label]) => (
+              <div key={label} className="bg-white/75 px-5 py-5 backdrop-blur">
+                <p className="font-display text-xl font-semibold text-ink">{value}</p>
+                <p className="mt-1 text-sm text-muted">{label}</p>
+              </div>
+            ))}
           </motion.div>
-
-          <motion.a
-            href="#about"
-            className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/50 hover:text-white transition-colors hidden sm:flex flex-col items-center gap-2"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.1 }}
-            aria-label="Scroll to about"
-          >
-            <span className="text-[11px] tracking-[0.25em] uppercase">Scroll</span>
-            <motion.span
-              className="w-px h-8 bg-white/40"
-              animate={{ scaleY: [1, 0.4, 1], opacity: [0.4, 1, 0.4] }}
-              transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-            />
-          </motion.a>
-        </div>
-      </section>
+        </section>
 
       {/* About */}
-      <section id="about" className="relative py-24 md:py-32 px-5 sm:px-8" aria-labelledby="about-heading">
-        <div className="max-w-3xl mx-auto">
+      <section id="about" className="relative px-5 py-24 sm:px-8 md:py-32" aria-labelledby="about-heading">
+        <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:gap-20">
+          <motion.div
+            className="lg:sticky lg:top-28 lg:self-start"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-80px" }}
+            variants={fadeUp}
+          >
+            <p className="font-display mb-3 text-sm uppercase tracking-[0.18em] text-accent">About</p>
+            <h2 id="about-heading" className="font-display text-4xl font-semibold tracking-tight text-ink md:text-5xl">
+              Experience that spans product and platform.
+            </h2>
+          </motion.div>
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
             variants={fadeUp}
           >
-            <p className="font-display text-accent text-sm tracking-[0.18em] uppercase mb-3">About</p>
-            <h2 id="about-heading" className="font-display text-4xl md:text-5xl font-semibold text-ink mb-8 tracking-tight">
-              Engineer. Builder. Problem solver.
-            </h2>
-            <p className="text-lg text-muted leading-relaxed mb-6">
+            <p className="mb-6 text-xl leading-relaxed text-ink-soft md:text-2xl">
               I&apos;m Indy Singh, a senior engineer and AI/ML enthusiast with over a decade of experience in
-              building, supporting, and scaling technology solutions. I specialise in automation, cloud
-              infrastructure, and AI-driven products — turning ideas into working SaaS applications.
+              building, supporting, and scaling technology solutions.
             </p>
-            <p className="text-lg text-muted leading-relaxed mb-10">
-              My projects include EventAlpha, CryptoBankStatement, SlangWatch.com, BingoGen.ai, PhotoComply, and
-              RageRoom Directory — each built for real-world challenges.
+            <p className="mb-10 text-lg leading-relaxed text-muted">
+              I combine enterprise reliability with a founder&apos;s bias for action. That means understanding
+              the problem, shaping the product, writing the code, and learning from real users—not simply
+              handing off a specification.
             </p>
-            <div className="flex flex-wrap gap-3">
+            <div className="grid gap-4 border-y border-line py-7 sm:grid-cols-3">
+              {[
+                ["01", "Frame the problem"],
+                ["02", "Build the right thing"],
+                ["03", "Ship and improve"],
+              ].map(([number, label]) => (
+                <div key={number}>
+                  <p className="font-display text-sm font-semibold text-accent">{number}</p>
+                  <p className="mt-1 font-medium text-ink">{label}</p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-8 flex flex-wrap gap-3">
               {[
                 { href: "https://www.linkedin.com/in/indy-singh-88986617/", label: "LinkedIn" },
                 { href: "https://github.com/indy86-collab/", label: "GitHub" },
@@ -554,7 +595,7 @@ export default function Home() {
                   href={link.href}
                   target={link.href.startsWith("http") ? "_blank" : undefined}
                   rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                  className="inline-flex items-center px-5 py-2.5 border border-ink/15 text-ink text-sm font-medium hover:border-accent hover:text-accent transition-colors duration-300"
+                  className="inline-flex items-center rounded-full border border-ink/15 px-5 py-2.5 text-sm font-medium text-ink transition-colors duration-300 hover:border-accent hover:text-accent"
                 >
                   {link.label}
                 </a>
@@ -565,7 +606,7 @@ export default function Home() {
       </section>
 
       {/* Achievements */}
-      <section className="py-24 md:py-28 px-5 sm:px-8 bg-ink text-white relative overflow-hidden">
+      <section className="relative overflow-hidden bg-ink px-5 py-24 text-white sm:px-8 md:py-28">
         <div className="absolute inset-0 opacity-20 grid-fade" />
         <div className="max-w-4xl mx-auto relative">
           <motion.div
@@ -602,7 +643,7 @@ export default function Home() {
       </section>
 
       {/* Skills */}
-      <section id="skills" className="py-24 md:py-28 px-5 sm:px-8" aria-labelledby="skills-heading">
+      <section id="skills" className="px-5 py-24 sm:px-8 md:py-28" aria-labelledby="skills-heading">
         <div className="max-w-6xl mx-auto">
           <motion.div
             className="mb-14"
@@ -617,7 +658,7 @@ export default function Home() {
             </h2>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-x-12 gap-y-10">
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {skillGroups.map((group, index) => (
               <motion.div
                 key={group.title}
@@ -626,15 +667,16 @@ export default function Home() {
                 viewport={{ once: true, margin: "-40px" }}
                 variants={fadeUp}
                 custom={index * 0.5}
+                className="rounded-2xl border border-line bg-white/65 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:shadow-[0_18px_50px_rgba(11,18,32,0.08)]"
               >
-                <h3 className="font-display text-xl font-semibold text-ink mb-4 pb-3 border-b border-line">
+                <h3 className="font-display mb-4 border-b border-line pb-3 text-xl font-semibold text-ink">
                   {group.title}
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {group.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="text-sm text-muted px-3 py-1.5 bg-white/70 border border-line hover:border-accent/40 hover:text-ink transition-colors duration-300"
+                      className="rounded-full border border-line bg-surface px-3 py-1.5 text-sm text-muted transition-colors duration-300 hover:border-accent/40 hover:text-ink"
                     >
                       {skill}
                     </span>
@@ -647,7 +689,7 @@ export default function Home() {
       </section>
 
       {/* Projects */}
-      <section id="projects" className="py-24 md:py-28 px-5 sm:px-8 bg-white/50" aria-labelledby="projects-heading">
+      <section id="projects" className="bg-white/55 px-5 py-24 sm:px-8 md:py-28" aria-labelledby="projects-heading">
         <div className="max-w-6xl mx-auto">
           <motion.div
             className="mb-14 max-w-2xl"
@@ -665,11 +707,11 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
+          <div className="grid gap-7 md:grid-cols-2">
             {projects.map((project, index) => (
               <motion.article
                 key={project.title}
-                className="group"
+                className="group overflow-hidden rounded-[1.5rem] border border-line bg-white shadow-[0_12px_40px_rgba(11,18,32,0.05)] transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_24px_70px_rgba(11,18,32,0.12)]"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: "-60px" }}
@@ -677,12 +719,14 @@ export default function Home() {
                 custom={index * 0.35}
               >
                 <a href={project.href} target="_blank" rel="noopener noreferrer" className="block">
-                  <div className="relative aspect-[16/10] overflow-hidden mb-5 bg-ink">
+                  <div className="relative aspect-[16/10] overflow-hidden bg-ink">
                     {project.image ? (
-                      <img
+                      <Image
                         src={project.image}
                         alt={project.title}
-                        className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
                       />
                     ) : (
                       <div className={`w-full h-full bg-gradient-to-br ${project.accent} flex items-end p-6`}>
@@ -693,29 +737,25 @@ export default function Home() {
                   </div>
                 </a>
 
-                <div className="flex flex-wrap gap-2 mb-3">
-                  {project.tags.map((tag) => (
-                    <span key={tag} className="text-xs tracking-wide uppercase text-accent font-medium">
-                      {tag}
+                <div className="p-6 md:p-7">
+                  <div className="mb-3 flex flex-wrap gap-2">
+                    {project.tags.map((tag) => (
+                      <span key={tag} className="rounded-full bg-accent/8 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-accent">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="mb-3 flex items-center justify-between gap-4">
+                    <h3 className="font-display text-2xl font-semibold text-ink transition-colors group-hover:text-accent">
+                      <a href={project.href} target="_blank" rel="noopener noreferrer">
+                        {project.title}
+                      </a>
+                    </h3>
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-line text-lg text-ink transition-all group-hover:border-accent group-hover:bg-accent group-hover:text-white" aria-hidden="true">
+                      ↗
                     </span>
-                  ))}
-                </div>
-
-                <h3 className="font-display text-2xl font-semibold text-ink mb-2 group-hover:text-accent transition-colors">
-                  <a href={project.href} target="_blank" rel="noopener noreferrer">
-                    {project.title}
-                  </a>
-                </h3>
-                <p className="text-muted leading-relaxed mb-4">{project.description}</p>
-                <div className="flex gap-4 text-sm font-medium">
-                  <a
-                    href={project.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="link-underline text-ink"
-                  >
-                    Live demo
-                  </a>
+                  </div>
+                  <p className="leading-relaxed text-muted">{project.description}</p>
                 </div>
               </motion.article>
             ))}
@@ -814,7 +854,7 @@ export default function Home() {
       </section>
 
       {/* Services */}
-      <section id="services" className="py-24 md:py-28 px-5 sm:px-8" aria-labelledby="services-heading">
+      <section id="services" className="px-5 py-24 sm:px-8 md:py-28" aria-labelledby="services-heading">
         <div className="max-w-6xl mx-auto">
           <motion.div
             className="mb-14 max-w-2xl"
@@ -832,7 +872,7 @@ export default function Home() {
 
           <div className="grid lg:grid-cols-2 gap-8 mb-12">
             <motion.div
-              className="border border-line bg-white/60 p-8 hover:border-accent/40 transition-colors duration-300"
+              className="rounded-[1.5rem] border border-line bg-white/70 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-[0_20px_60px_rgba(11,18,32,0.08)]"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
@@ -863,14 +903,14 @@ export default function Home() {
               </div>
               <a
                 href="mailto:indyz_86@hotmail.com?subject=Freelance Micro-Gig Inquiry"
-                className="btn-primary inline-flex w-full items-center justify-center bg-ink text-white font-semibold py-3.5 px-6 hover:bg-ink-soft transition-colors"
+                className="btn-primary inline-flex w-full items-center justify-center rounded-full bg-ink px-6 py-3.5 font-semibold text-white transition-colors hover:bg-ink-soft"
               >
                 Get in touch for micro-gigs
               </a>
             </motion.div>
 
             <motion.div
-              className="border border-line bg-white/60 p-8 hover:border-accent-warm/50 transition-colors duration-300"
+              className="rounded-[1.5rem] border border-line bg-white/70 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-accent-warm/50 hover:shadow-[0_20px_60px_rgba(11,18,32,0.08)]"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
@@ -913,7 +953,7 @@ export default function Home() {
               </div>
               <a
                 href="mailto:indyz_86@hotmail.com?subject=Productised Service Inquiry"
-                className="btn-primary inline-flex w-full items-center justify-center bg-accent-warm text-white font-semibold py-3.5 px-6 hover:brightness-110 transition-all"
+                className="btn-primary inline-flex w-full items-center justify-center rounded-full bg-accent-warm px-6 py-3.5 font-semibold text-white transition-all hover:brightness-110"
               >
                 Get in touch for packages
               </a>
@@ -921,7 +961,7 @@ export default function Home() {
           </div>
 
           <motion.div
-            className="relative overflow-hidden bg-ink text-white px-8 py-12 md:px-12"
+            className="relative overflow-hidden rounded-[1.5rem] bg-ink px-8 py-12 text-white md:px-12"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -963,27 +1003,27 @@ export default function Home() {
       </section>
 
       {/* Connect */}
-      <section id="connect" className="py-20 px-5 sm:px-8 border-t border-line" aria-labelledby="connect-heading">
-        <div className="max-w-3xl mx-auto text-center">
+      <section id="connect" className="border-t border-line px-5 py-24 sm:px-8" aria-labelledby="connect-heading">
+        <div className="mx-auto max-w-4xl rounded-[2rem] bg-accent px-6 py-14 text-center text-white shadow-[0_30px_80px_rgba(15,118,110,0.2)] md:px-14 md:py-16">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-            <h2 id="connect-heading" className="font-display text-3xl md:text-4xl font-semibold text-ink mb-4">
-              Let&apos;s connect
+            <p className="font-display mb-3 text-sm uppercase tracking-[0.18em] text-white/70">Have a project in mind?</p>
+            <h2 id="connect-heading" className="font-display mb-4 text-4xl font-semibold tracking-tight md:text-5xl">
+              Let&apos;s build something useful.
             </h2>
-            <p className="text-muted text-lg mb-8">
-              Whether for knowledge sharing or a project you&apos;d like to discuss, I&apos;m open to conversation.
+            <p className="mx-auto mb-9 max-w-2xl text-lg text-white/75">
+              Tell me what you&apos;re trying to solve. I&apos;ll respond with a practical next step, not a sales pitch.
             </p>
-            <div className="flex justify-center gap-6">
+            <div className="flex flex-col justify-center gap-3 sm:flex-row">
               {[
-                { href: "https://www.linkedin.com/in/indy-singh-88986617/", label: "LinkedIn" },
-                { href: "https://github.com/indy86-collab/", label: "GitHub" },
-                { href: "mailto:indyz_86@hotmail.com", label: "Email" },
+                { href: "mailto:indyz_86@hotmail.com?subject=Project enquiry", label: "Email me" },
+                { href: "https://www.linkedin.com/in/indy-singh-88986617/", label: "Connect on LinkedIn" },
               ].map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
                   target={link.href.startsWith("http") ? "_blank" : undefined}
                   rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                  className="link-underline text-ink font-medium"
+                  className="rounded-full bg-white px-6 py-3 font-semibold text-ink transition-transform hover:-translate-y-0.5"
                 >
                   {link.label}
                 </a>
@@ -992,13 +1032,14 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+      </main>
 
       {/* Floating WhatsApp */}
       <motion.a
         href="https://wa.me/447878514912?text=Hi%20Indy,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect!"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] text-white flex items-center justify-center shadow-lg hover:scale-105 transition-transform"
+        className="fixed bottom-5 right-5 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform hover:scale-105 sm:bottom-6 sm:right-6 sm:h-14 sm:w-14"
         aria-label="Chat on WhatsApp"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
